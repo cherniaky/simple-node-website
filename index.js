@@ -14,7 +14,7 @@ http.createServer(function (req, res) {
         if (reqUrl == "style.css") {
 
             const cssFile = fs.readFileSync("./style.css", "utf8");
-            
+             res.setHeader("Content-Type", "text/css");
             res.end(cssFile);
 
         } else {
